@@ -1,0 +1,40 @@
+# Build outputs
+build/
+bin/
+lib/
+*.o
+*.a
+*.so
+*.dylib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Data files
+*.vtk
+*.vtu
+*.pvd
+*.dat
+*.csv
+results/
