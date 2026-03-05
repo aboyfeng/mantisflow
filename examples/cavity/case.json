@@ -1,0 +1,38 @@
+{
+    "name": "Lid-Driven Cavity",
+    "description": "Classic 2D lid-driven cavity benchmark case",
+    
+    "mesh": {
+        "type": "box",
+        "dimensions": [1.0, 1.0, 0.1],
+        "cells": [50, 50, 1]
+    },
+    
+    "physics": {
+        "density": 1.0,
+        "viscosity": 0.01
+    },
+    
+    "solver": {
+        "type": "simpleFoam",
+        "dt": 0.001,
+        "endTime": 10.0,
+        "tolerance": 1e-6
+    },
+    
+    "boundaryConditions": {
+        "top": {
+            "velocity": [1.0, 0.0, 0.0],
+            "pressure": "zeroGradient"
+        },
+        "walls": {
+            "velocity": [0.0, 0.0, 0.0],
+            "pressure": "zeroGradient"
+        }
+    },
+    
+    "output": {
+        "interval": 0.1,
+        "format": "vtk"
+    }
+}
